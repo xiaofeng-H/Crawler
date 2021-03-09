@@ -3,8 +3,6 @@ package pers.xiaofeng.jd;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.scheduling.annotation.EnableScheduling;
-import pers.xiaofeng.jd.pojo.Item;
-import pers.xiaofeng.jd.task.ItemTask;
 
 /**
  * @className: pers.xiaofeng.jd.Application
@@ -19,7 +17,5 @@ public class Application {
 
     public static void main(String[] args) throws Exception {
         SpringApplication.run(Application.class, args);
-        ItemTask itemTask = new ItemTask();
-        itemTask.itemTask();
     }
 }

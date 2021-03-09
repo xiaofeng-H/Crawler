@@ -3,6 +3,7 @@ package pers.xiaofeng.jd.service.impl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Example;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import pers.xiaofeng.jd.dao.ItemDao;
 import pers.xiaofeng.jd.pojo.Item;
 import pers.xiaofeng.jd.service.ItemService;
@@ -22,6 +23,7 @@ public class ItemServiceImpl implements ItemService {
     private ItemDao itemDao;
 
     @Override
+    @Transactional  // 开启事务，提交事务
     public void save(Item item) {
         this.itemDao.save(item);
     }
